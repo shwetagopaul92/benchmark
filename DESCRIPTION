@@ -1,0 +1,19 @@
+Package: Benchmark
+Title:Benchmarking performance of VariantAnnotation methods and GoogleGenomics methods
+Description: Compares the acquisition of genotypes via VariantAnnotation & GoogleGenomics methods.
+Version: 0.0.0
+Author: Shweta Gopaulakrishnan
+Imports: microbenchmark,
+    ldblock,
+    VariantAnnotation,
+    VariantTools,
+    GoogleGenomics,
+Depends:
+    VariantAnnotation,ldblock,microbenchmark,GoogleGenomics,knitr
+Suggests:
+Maintainer: Shweta Gopaulakrishnan <reshg@channing.harvard.edu>
+License: License
+LazyLoad: yes
+BiocViews: 
+RoxygenNote: 5.0.1
+VignetteBuilder: knitr
