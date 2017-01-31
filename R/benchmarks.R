@@ -7,6 +7,11 @@
 # Extracting the genotypes for interval ranges between - 16051400,16051500 on chromosome 22 using VariantAnnotation approach.
 # Looking at the time taken to perform this using VariantAnnotation readVcf method.
 #' benchmark readVcf for select genomic interval, and return the vcf object with timings in a list
+#' @param chr character encoding chromosome in the vcf
+#' @param start starting location for interval to search for variants
+#' @param end end location of interval
+#' @param times passed to \code{\link[microbenchmark]{microbenchmark}}
+#' @return a list with components \code{bench} giving timings, \code{data} giving variants, and \code{call} describing call
 #' @export
 micro_readVcf <- function(chr="22", start=16051400, end=16051500, times=5){
   thecall = match.call()
