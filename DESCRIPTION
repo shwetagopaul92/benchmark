@@ -8,7 +8,7 @@ Imports: microbenchmark,
     VariantAnnotation,
     VariantTools,
     GoogleGenomics
-Depends:
+Depends: knitr
 Suggests:
 Maintainer: Shweta Gopaulakrishnan <reshg@channing.harvard.edu>
 License: License
