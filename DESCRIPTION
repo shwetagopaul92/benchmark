@@ -7,9 +7,8 @@ Imports: microbenchmark,
     ldblock,
     VariantAnnotation,
     VariantTools,
-    GoogleGenomics,
+    GoogleGenomics
 Depends:
-    VariantAnnotation,ldblock,microbenchmark,GoogleGenomics,knitr
 Suggests:
 Maintainer: Shweta Gopaulakrishnan <reshg@channing.harvard.edu>
 License: License
