@@ -8,7 +8,19 @@ micro_getVariantCalls(datasetId = "10473108253681171589", chr = "22",
   start = 16051400, end = 16051500, times = 5, fields = NULL,
   converter = c)
 }
-\description{
-benchmark GG getVariantCalls for select genomic interval, and return the vcf object with timings in a list
+\arguments{
+\item{chr}{character encoding chromosome in the vcf}
+
+\item{start}{starting location for interval to search for variants}
+
+\item{end}{end location of interval}
+
+\item{times}{passed to \code{\link[microbenchmark]{microbenchmark}}}
+}
+\value{
+a list with components \code{bench} giving timings, \code{data} giving variants, and \code{call} describing call
+}
+\author{
+Shweta Gopaulakrishnan <reshg@channing.harvard.edu>
 }
 

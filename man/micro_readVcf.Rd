@@ -2,6 +2,7 @@
 % Please edit documentation in R/benchmarks.R
 \name{micro_readVcf}
 \alias{micro_readVcf}
+\title{benchmark readVcf for select genomic interval, and return the vcf object with timings in a list}
 \usage{
 micro_readVcf(chr = "22", start = 16051400, end = 16051500, times = 5)
 }
@@ -19,6 +20,5 @@ a list with components \code{bench} giving timings, \code{data} giving variants,
 }
 \author{
 Shweta Gopaulakrishnan <reshg@channing.harvard.edu>
-benchmark readVcf for select genomic interval, and return the vcf object with timings in a list
 }
 
