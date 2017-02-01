@@ -1,0 +1,20 @@
+---
+title: "Comparisons in the benchmark package"
+author: "  "
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: html_document
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+# Sketch of comparison
+
+```{r setup}
+library(Benchmark)
+m1 = micro_readVcf()
+m2 = micro_getVariantCalls()
+m3 = micro_getVariantCalls(datasetId="4252737135923902652" )
+m1[[1]]
+m2[[1]]
+m3[[1]]
+```
