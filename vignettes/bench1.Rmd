@@ -18,21 +18,5 @@ m1[[1]]
 m2[[1]]
 m3[[1]]
 ```
-you can bring this to your local disk (for chr22)
-http://1000genomes.s3.amazonaws.com/release/20130502/ALL.chr%%NUM%%.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz
-http://1000genomes.s3.amazonaws.com/release/20130502/ALL.chr%%NUM%%.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz.tbi
 
-TabixFile for that file, and readVcf will operate on that.  
 
-and then get some procedure for plotting the width against the time elapsed
-#
-# SevenBridges -- get variants? -- session needed in EC2?
-
-think about a paper that would have the title Genome-scale computing with various cloud APIs
-
-local computing from cloud data using Bioconductor
-local computing from cloud data using GCP (GoogleGenomics API)
-local or remote computing from cloud data using SB
-remote computing using bioc/EC2 with the bioc AMI
-remote computing using GCP -- get the variants using bigtable/bigquery?
-remote computing using SB
