@@ -32,6 +32,10 @@ micro_readVcf_clo <- function(vcffile) function(chr="22", start=16051400, end=16
   #list(bench=m1, data=tmp, call=thecall)
   list(timings = m1, outputSize=object.size(tmp), start=start, end=end, chr=chr )
 }
+  # instead of returning a list, design a class
+  # setOldClass("microbenchmark")
+  # setClass("benchOut", representation(timings="microbenchmark", outputSize="numeric", start="numeric", chr="character"))
+  # setMethod("..." ..
 #
 # Result :
 # Unit: seconds
