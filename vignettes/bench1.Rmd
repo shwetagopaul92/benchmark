@@ -18,5 +18,18 @@ m1[[1]]
 m2[[1]]
 m3[[1]]
 ```
-
+Harness is a program that runs other programs.
+```{r doharn}
+varHarness = function( range, methods, times=5 ) {
+  lapply( methods, function(f) f(range, times) )
+  }
+ cloudReadVcf = function(range, times) {
+   chr = as.character(seqnames(ranges))
+   start = start(range)
+   end = end(range)
+   micro_readVcf( chr=chr, start=start, end=end )
+ }
+ methodList = list(cloud=cloudReadVcf)
+ varHarness( GRanges("17", IRanges(16.05e6, width=100)), methodList, times=2 )
+ ```
 
