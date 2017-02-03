@@ -21,6 +21,14 @@ micro_localreadVcf <- function(chr="22", start=16051400, end=16051500, times=5){
   m3 = microbenchmark(tmp <- readVcf("/Users/reshg/Documents/My_benchmark_files/ALL.chr22.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz.tbi", param = parm),times = times) # not yet a VRanges so may be cheaper than we deserve
   list(bench=m3, data=tmp, call=thecall)
 }
+micro_readVcf_clo <- function(vcffile) function(chr="22", start=16051400, end=16051500, times=5){
+  thecall = match.call()
+  parm = ScanVcfParam(which = GRanges(chr, IRanges(start,end)))  # should check against chromosome lengths in seqlengths(Homo.sapiens)
+  #myread_readvcf = readVcf(vcffile, param = parm)
+  m1 = microbenchmark(tmp <- readVcf(vcffile, param = parm),times = times) # not yet a VRanges so may be cheaper than we deserve
+  #list(bench=m1, data=tmp, call=thecall)
+  list(timings = m1, outputSize=object.size(tmp), start=start, end=end, chr=chr )
+}
 #
 # Result :
 # Unit: seconds
