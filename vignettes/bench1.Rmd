@@ -31,7 +31,9 @@ varHarness = function( ranges, methods, times=5 ) {
    end = end(range)
    micro_readVcf( chr=chr, start=start, end=end, times=times )
  }
- methodList = list(cloud=cloudReadVcf)
- varHarness( GRanges("17", IRanges(16.05e6, width=100)), methodList, times=2 )
+ cloudMeth = micro_readVcf_clo(s3_1kg("17"))
+ localMeth = micro_readVcf_clo(...local file...)
+ methodList = list(cloud=cloudMeth, local=localMeth)
+ varHarness( GRanges("17", IRanges(16.05e6, widths=c(100, 500, 1000, 5000))), methodList, times=2 )
  ```
 
