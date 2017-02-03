@@ -19,7 +19,8 @@ micro_readVcf <- function(chr="22", start=16051400, end=16051500, times=5){
   parm = ScanVcfParam(which = GRanges(chr, IRanges(start,end)))  # should check against chromosome lengths in seqlengths(Homo.sapiens)
   #myread_readvcf = readVcf(s3_1kg(chr), param = parm)
   m1 = microbenchmark(tmp <- readVcf(s3_1kg(chr), param = parm),times = times) # not yet a VRanges so may be cheaper than we deserve
-  list(bench=m1, data=tmp, call=thecall)
+  #list(bench=m1, data=tmp, call=thecall)
+  list(timings = m1, outputSize=object.size(tmp), start=start, end=end, chr=chr )
 }
 #
 # Result :
